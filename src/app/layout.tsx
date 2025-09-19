@@ -16,7 +16,11 @@ export const metadata: Metadata = {
   title: "The Veymont Group",
   description: "The Veymont Group - Your trusted partner",
   icons: {
-    icon: "/1.svg",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
   },
 };
 

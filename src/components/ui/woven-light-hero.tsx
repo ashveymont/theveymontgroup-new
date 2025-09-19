@@ -70,13 +70,26 @@ export const WovenLightHero = ({
           custom={headline.length}
           initial={{ opacity: 0, y: 30 }}
           animate={textControls}
-          className="mx-auto mt-4 sm:mt-6 max-w-xl text-base sm:text-lg text-slate-300 dark:text-slate-600"
+          className="mx-auto mt-4 sm:mt-6 max-w-xl text-base sm:text-lg text-white dark:text-white"
           style={{ fontFamily: "'Inter', sans-serif" }}
         >
           {subtext}
         </motion.p>
         <motion.div initial={{ opacity: 0 }} animate={buttonControls} className="mt-8 sm:mt-10">
-          <Link href={ctaHref} className="inline-block rounded-full border-2 border-white/20 bg-white/10 px-6 sm:px-8 py-2.5 sm:py-3 font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/20 dark:border-slate-800/20 dark:bg-slate-800/5 dark:text-slate-800 dark:hover:bg-slate-800/10" style={{ fontFamily: "'Inter', sans-serif" }}>
+          <Link 
+            href={ctaHref} 
+            onClick={(e) => {
+              if (ctaHref.startsWith('#')) {
+                e.preventDefault();
+                const element = document.querySelector(ctaHref);
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }
+            }}
+            className="inline-block rounded-full border-2 border-white/20 bg-white/10 px-6 sm:px-8 py-2.5 sm:py-3 font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/20 dark:border-slate-800/20 dark:bg-slate-800/5 dark:text-slate-800 dark:hover:bg-slate-800/10" 
+            style={{ fontFamily: "'Inter', sans-serif" }}
+          >
             {ctaLabel}
           </Link>
         </motion.div>

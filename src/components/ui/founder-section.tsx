@@ -12,9 +12,6 @@ export const FounderSection = () => {
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
             Founder
           </h2>
-          <p className="mt-2 text-sm sm:text-base text-slate-300" style={{ fontFamily: "'Inter', sans-serif" }}>
-            Ashan Veymont – Architect of Inevitability
-          </p>
         </header>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -45,20 +42,26 @@ export const FounderSection = () => {
             transition={{ delay: 0.1, duration: 0.8, ease: [0.2, 0.65, 0.3, 0.9] }}
           >
             <h3 className="text-2xl sm:text-3xl font-semibold text-white" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Ashan Veymont – Architect of Inevitability
+              Ashan Veymont – Architect of a Dharmic Empire
             </h3>
             <div className="mt-4 space-y-4 text-base sm:text-lg leading-relaxed text-slate-300" style={{ fontFamily: "'Inter', sans-serif" }}>
               <p>
-                Ashan Veymont isn’t just building companies—he’s building legacies.
+                Ashan Veymont builds with the precision of a strategist and the devotion of a seeker.
               </p>
               <p>
-                From a childhood shaped by silence and resilience in Sri Lanka, Ashan learned the cost of unspoken truth and the power of systems that free people from powerlessness.
+                From Sri Lanka to the global stage, his work fuses advanced technology with timeless principles of dharma—crafting enterprises designed to endure for generations.
               </p>
               <p>
-                A chess prodigy turned sales psychologist and hypnotic closer, Ashan scaled companies to six-figure months before age 24. He founded Mytosis, Sri Lanka’s first agentic AI and hologram company, and is now creating a dharmic empire through The Veymont Group—a portfolio spanning AI, travel, sapphires, real estate, data centers, and mental health.
+                By his early twenties he had already proven a rare mastery of human psychology and revenue architecture, scaling companies to consistent six-figure months. Today, through The Veymont Group, Ashan channels that mastery into a constellation of ventures: agentic AI and holograms, transformative travel, heirloom sapphires, sustainable data centers, and mindful technologies.
               </p>
               <p>
-                His guiding principle is simple: “I build so the next generation never wonders if it’s possible.”
+                For Ashan, entrepreneurship is a sacred art: the disciplined creation of systems that uplift culture and expand what humanity believes is possible.
+              </p>
+              <p>
+                His credo remains clear and unshakable:
+              </p>
+              <p className="text-lg sm:text-xl font-medium text-white italic">
+                "I build so the next generation never wonders if it's possible."
               </p>
             </div>
           </motion.div>
