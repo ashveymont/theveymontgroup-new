@@ -41,18 +41,19 @@ export const PartnerContactSection = () => {
           setIsSubmitted(false);
         }, 3000);
       } else {
-        // Fallback to mailto if API fails
-        const mailtoHref = `mailto:invest@theveymontgroup.com?subject=Investor%20Inquiry%20from%20${encodeURIComponent(
-          name || "Website Visitor"
-        )}&body=${encodeURIComponent(message)}%0A%0AFrom:%20${encodeURIComponent(email)}`;
-        window.location.href = mailtoHref;
+        // Log the error for debugging
+        const errorData = await response.text();
+        console.error('API Error:', response.status, errorData);
+        
+        // Show error message instead of mailto fallback
+        alert('There was an error sending your message. Please try again or contact us directly.');
       }
-    } catch {
-      // Fallback to mailto if API fails
-      const mailtoHref = `mailto:invest@theveymontgroup.com?subject=Investor%20Inquiry%20from%20${encodeURIComponent(
-        name || "Website Visitor"
-      )}&body=${encodeURIComponent(message)}%0A%0AFrom:%20${encodeURIComponent(email)}`;
-      window.location.href = mailtoHref;
+    } catch (error) {
+      // Log the error for debugging
+      console.error('Network Error:', error);
+      
+      // Show error message instead of mailto fallback
+      alert('There was a network error. Please check your connection and try again.');
     } finally {
       setIsSubmitting(false);
     }

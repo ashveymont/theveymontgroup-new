@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
     // Send email using Resend
     const resend = getResendClient();
     const { data, error } = await resend.emails.send({
-      from: 'contact@theveymontgroup.com', // This will be your verified domain
+      from: 'onboarding@resend.dev', // Using Resend's default domain
       to: ['ashanisurupublic@gmail.com'], // Your email
       subject: `New Investor Inquiry from ${name || 'Website Visitor'}`,
       html: `
