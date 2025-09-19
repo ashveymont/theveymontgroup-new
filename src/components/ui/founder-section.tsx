@@ -61,7 +61,7 @@ export const FounderSection = () => {
                 His credo remains clear and unshakable:
               </p>
               <p className="text-lg sm:text-xl font-medium text-white italic">
-                "I build so the next generation never wonders if it's possible."
+                &ldquo;I build so the next generation never wonders if it&rsquo;s possible.&rdquo;
               </p>
             </div>
           </motion.div>

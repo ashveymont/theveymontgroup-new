@@ -47,7 +47,7 @@ export const PartnerContactSection = () => {
         )}&body=${encodeURIComponent(message)}%0A%0AFrom:%20${encodeURIComponent(email)}`;
         window.location.href = mailtoHref;
       }
-    } catch (error) {
+    } catch {
       // Fallback to mailto if API fails
       const mailtoHref = `mailto:invest@theveymontgroup.com?subject=Investor%20Inquiry%20from%20${encodeURIComponent(
         name || "Website Visitor"
